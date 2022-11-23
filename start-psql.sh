@@ -1,22 +1,21 @@
 #!/bin/bash
 ################################################################################
-##  Fichier: start-psql.sh                                                    ##
+##  Fichier : start-psql.sh                                                   ##
 ##  Auteur : BAAM                                                             ##
 ##                                                                            ##
-##  Script Bash pour lancer PSQL                                              ##
+##  Description : Script Bash pour lancer PSQL                                ##
 ##                                                                            ##
-##  Usage : './start-psql.sh [-h|--help|-u|--usage] [-o <output>] <login>'    ##
+##  Usage : './start-psql.sh [-h|--help|-u|--usage] [-o|-L <output>] <login>' ##
 ##      <login> : le login de l'IUT                                           ##
 ##      [-h|--help|-u|--usage] : affiche l'usage                              ##
-##      [-o <output>] : écrit tout les retours de requêtes dans <output>      ##
+##      [-o|-L <output>] : écrit tout les retours de requêtes dans <output>   ##
+##                                                                            ##
+##  'man psql' pour plus d'inforamtions                                       ##
 ##                                                                            ##
 ################################################################################
 
-C_RED='\e[1;31m'
-C_RES='\e[0m'
-
-#OUTPUT=
-#LOGIN=
+C_RED='\e[1;31m' # ANSI ESC SEQ -> ROUGE
+C_RES='\e[0m'    # ANSI ESC SEQ -> RESET
 
 # affichage usage
 usage () {
@@ -32,9 +31,6 @@ erreur () {
     exit $2
 }
 
-# erreur: aucun arguments
-[ $# -eq 0 ] && erreur '1 argument manquant' 1
-
 # traitement des arguments
 while [ $# -ne 0 ]; do
     case $1 in
@@ -42,9 +38,9 @@ while [ $# -ne 0 ]; do
             usage
             exit 0
             ;;
-        '-o')
-            OUTPUT="-o $2"
-            shift 2 || erreur 'output manquant' 3
+        '-o'|'-L')
+            OUTPUT="$1 $2"
+            shift 2 || erreur 'output manquant' 2
             ;;
         *)
             LOGIN="$1"
@@ -54,8 +50,7 @@ while [ $# -ne 0 ]; do
 done
 
 # erreur: login manquant
-[ -z $LOGIN ] && erreur 'login manquant'
+[ -z $LOGIN ] && erreur 'login manquant' 1
 
 # évaluation de la commande
 eval "psql -h londres -d db$LOGIN -U $LOGIN -W $OUTPUT"
-exit 0
