@@ -17,7 +17,7 @@ On pourra y retrouver :
   * le [sujet](./sae1.04_sujet.pdf) de cette SAE, 
   * ce [README](./README.md) *(qui contient certaines infos comme des liens utiles)*
   * un [.gitignore](./.gitignore) *(fichier contenant les fichiers à exclure du `git add .`)*
-  * un [script](./start-psql.sh) de démarrage de **PSQL** *(-> plus d'informations [ici](#Script-start-psql.sh)))*
+  * un [script](./start-psql.sh) de démarrage de **PSQL** *(-> plus d'informations [ici](#script-start-psql-sh-start-psql-sh-1))*
 
 
 
