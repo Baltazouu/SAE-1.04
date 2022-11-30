@@ -33,6 +33,21 @@ Ce script permet de lancer **PSQL** sur les machines de l'IUT. Il fonctionne de 
 ```
 > *De manière plus simple, executez `./start-psql <login>` dans la racine du projet, où *\<login>* est votre identifiant UCA.*
 
+### Git dans le projet
+
+#### Les principales branches
+  * `main` : la branche principale où le rendu y sera déposé
+  * `dev` : la branche où seront fusionnées les différentes parties du projet et où les nouvelles branches seront créées
+  * `dev-sql` : la branch dev de la partie "scripts SQL", les branches de cette partie seront créées
+  * `rapport_BDD` : la branche principale de la créations du rapport de la partie Base de données
+  * `rapport_ECO` : la branche principale de la créations du rapport de la partie Economie durable et numérique
+  * `struct-projet` : la branche où toutes les modifications à la structure du projet seront effectuées[^2]
+
+#### Gestion du projet grace à *code\#0*
+Il peut être efficace de s'organiser grâce au outils de gestion de projet proposé par ***code\#0***.  
+Vous pouvez avoir un aperçu de ces outils et de leur utilisation grâce au bouton \[[Tutorials](https://codefirst.iut.uca.fr/documentation/CodeFirst/docusaurus/GuidesTutorials/)\] dans le bandau en haut de la page.[^3]
+
+Vous pouvez retrouver certains liens à ces outils dans la section '*[Liens utiles](#liens-utiles)*' ci-dessous.
 
 
 ## Liens utiles
@@ -41,9 +56,12 @@ Ce script permet de lancer **PSQL** sur les machines de l'IUT. Il fonctionne de 
 )
 * [Lien vers la roadmap du projet](https://codefirst.iut.uca.fr/git/BAAM/SAE-1.04/projects/88)
 * [Lien vers la milestone du rendu](https://codefirst.iut.uca.fr/git/BAAM/SAE-1.04/milestone/47)
+* [Lien vers la page d'aide à l'utilisation de GIT dans le wiki du projet](https://codefirst.iut.uca.fr/git/BAAM/SAE-1.04/wiki/Utilisation-de-GIT)
 
 
 
 ### Notes
 
-[^1]: *Vous pouver réutiliser ce script ou le modifier pour le faire lancer votre propre serveur PSQL. Faites cependant attention à ne pas `push` les modifications de ce fichier. Cela pourrait modifier les fichiers de tout le monde et rendre inutilisable ce script.*
+[^1]: *Vous pouver réutiliser ce script ou le modifier pour le faire lancer votre propre serveur PSQL. Faites cependant attention à ne pas `git push` les modifications de ce fichier. Cela pourrait modifier les fichiers de tout le monde et rendre inutilisable ce script.*
+[^2]: *Veillez à toujours faire un `git pull` avant de commencer une quelconque modification sur une branche, notamment quand cela concerne une branche principale. Par ailleurs, à chaque modifications faites dans cette branche, il faut penser à mettre à jour les branches qui en on besoin.*
+[^3]: *Cette page du tutoriel est particulièrement intéressante. -> https://codefirst.iut.uca.fr/documentation/CodeFirst/docusaurus/GuidesTutorials/docs/project_management/kanban/*
