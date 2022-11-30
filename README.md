@@ -40,6 +40,7 @@ Ce script permet de lancer **PSQL** sur les machines de l'IUT. Il fonctionne de 
 * [Lien Lucidchart - Modèle Entités-Associations](https://sg.app.lucidchart.com/uni/ls/click?upn=iVTT-2Fpq7gkkDxN5WGuJTwlaOJDS9CRXuWWJ-2FtluujEgs8B6mNvAhAsDkWK3ycsMwXx86xxiyPW4IzhUrR84FTJpWGReqSSd30yyKOkwCZ-2BqmKm2b9Vnta0dF6fGV6V0AESLlSg7nhwOYo9eXvmQpCpUqv0Wdn8PG1-2BFlDdrtEDUe8OzSUQYBYUT0q0UferZopFVP_nx1QKxP5K9TFoBZ-2Fz3K-2FiJoAJR6vcAtQAak936vqYU146GpopD274CJkrB08KsKh192jue7-2Fb3Sshha9Sk9BQDdKqik6zSLvF2ufo-2FyEUC68lP0jyftzf-2F7n91-2BZJhTv7EeI-2Fxb7Npu5vLp20-2BXmF57Xkv9yYHeRJmgeWc3YXXiZJq3oYHl-2Fn1dVdP3EtsEn9edl6npJXWmcuRqhdKrlbmWCJS3d13YbDYyq3fLGkx4ITydSLd-2BZCro8GLkwI9GfrtimE-2B-2B51XTGwUc0tDGCdoRBVBzak0w8WbkZjIv3MaO0zfgfR9lVW-2ByvGsXEVqu5U1KH5esX9FfRuikgvSrSSjS9UqeOdqZ5CyoGhPSvsjZBC22OdirJbi8RhQ7iwAJ6upLMHafWRv9ap56zi4oueYnyjAwbIZ-2FRPwshSLVAEONEsmQf8JBeq7wAke8K6B-2F1uJcmBhCiMhjcfZerf-2Biik1SYmplzuqBvR7aWt0sh936EAI-2Bxuyg3TXkNn1wkunUgII1OemooLm-2BdR3rZE7q8lGqkS8tpEpd-2FdPuyd0vT9S8dkZkEqYXOfeaF2kI5JINF9A8ZSXzHrZ1DIj5c2XF469S6QWbRah8ZCpwjFz3ER2swiIpZJVrpO8NYDECKjLVe
 )
 * [Lien vers la roadmap du projet](https://codefirst.iut.uca.fr/git/BAAM/SAE-1.04/projects/88)
+* [Lien vers la milestone du rendu](https://codefirst.iut.uca.fr/git/BAAM/SAE-1.04/milestone/47)
 
 
 
