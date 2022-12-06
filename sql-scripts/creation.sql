@@ -66,3 +66,14 @@ CREATE TABLE Formule (
     optAssurance varchar(40) CONSTRAINT opt_assurance NOT NULL
 
 );
+
+CREATE TABLE Vehicule (
+    idVehicule char(5) CONSTRAINT cp_Vehicule PRIMARY KEY,
+    tempReserv numeric(3) CONSTRAINT tempreserv VALUES ('YYYY-MM-DD') NOT NULL,
+    Kilometrage numeric(7) CONSTRAINT kilometre NOT NULL,
+    nivCarburant float(4) CONSTRAINT niv_carbu NOT NULL,
+    nbLocation numeric(4) CONSTRAINT nb_loc NOT NULL,
+    Etat numeric (1) CONSTRAINT etat CHECK(etat IN (1,0)) NOT NULL,
+    Imatriculation varchar(10) CONSTRAINT immatriculation NOT NULL,
+
+);
