@@ -55,3 +55,14 @@ CREATE TABLE Type (
     TypeMotorisation varchar(10) CONSTRAINT Motorisation CHECK(TypeMotorisation IN ('Hybride','Thermique','Electrique')) NOT NULL,
     TypeBoiteVitesse varchar(10) CONSTRAINT BoiteVitesse CHECK(TypeBoiteVitesse IN ('Mecanique','Automatique')) 
 );
+
+
+CREATE TABLE Formule (
+    idParc char(5) CONSTRAINT cp_Formule PRIMARY KEY,
+    prixJour float(6) CONSTRAINT prix_jour NOT NULL,
+    tempReserv numeric(2) CONSTRAINT temp_reserv NOT NULL,
+    Kilometremax numeric(3) CONSTRAINT km_max NOT NULL,
+    optCarburant varchar(30) CONSTRAINT opt_carbu NOT NULL,
+    optAssurance varchar(40) CONSTRAINT opt_assurance NOT NULL
+
+);
