@@ -5,7 +5,7 @@ DROP TABLE Client;
 CREATE TABLE Zone(
     idZone      CHAR(5)  CONSTRAINT cp_Zone PRIMARY KEY,
     nomZone     VARCHAR(20) CONSTRAINT nomZone NOT NULL,
-    addresseZone VARCHAR(50) CONSTRAINT addrZone NOT NULL
+
 );
 
 CREATE TABLE Parc(
