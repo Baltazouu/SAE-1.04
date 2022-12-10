@@ -79,3 +79,11 @@ CREATE TABLE Vehicule (
     Imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL,
 
 );
+
+CREATE TABLE Appartenir (
+    numType CHAR(5) CONSTRAINT ce_Type REFERENCES(Type),
+    numModel CHAR(5) CONSTRAINT ce_Modele REFERENCES(Modele),
+
+    PRIMARY KEY (numType,numModel)
+
+);
