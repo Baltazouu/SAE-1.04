@@ -32,7 +32,7 @@ CREATE TABLE Parc(
 
 CREATE TABLE Reduction(
 
-    typeClient VARCHAR(11) CONSTRAINT typeClient CHECK (typeClient IN('particulier','professionnel')) PRIMARY KEY,
+    typeClient VARCHAR(11) CONSTRAINT CP_typeClient CHECK (typeClient IN('particulier','professionnel')) PRIMARY KEY,
     NomReduction VARCHAR(15) CONSTRAINT NomReduction NOT NULL,
     PourcentageReduction NUMERIC(20) CONSTRAINT PourcentageReduction CHECK(PourcentageReduction>0) NOT NULL
 );
@@ -43,6 +43,7 @@ CREATE TABLE Reduction(
 CREATE TABLE Client(
 
     idClient    CHAR(10) CONSTRAINT cp_Client PRIMARY KEY,
+    typeClient VARCHAR(11) CONSTRAINT Ce_typeClient REFERENCES Reduction,
     nomClient   VARCHAR(20) CONSTRAINT nomClient NOT NULL,
     ageClient NUMERIC(3) CONSTRAINT ageClient NOT NULL,
     sexeClient CHAR(1) CONSTRAINT sexeClient CHECK(sexeClient IN ('M','F')) NOT NULL,
@@ -50,7 +51,7 @@ CREATE TABLE Client(
     numTel CHAR (10) CONSTRAINT Tel_Client
         CHECK (numTel LIKE ('[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')),
     mailClient VARCHAR(30) CONSTRAINT mailClient NOT NULL,
-    typeClient VARCHAR(11) CONSTRAINT typeClient CHECK (typeClient IN('particulier','professionnel'))
+   
     
 );
 
