@@ -32,3 +32,36 @@ INSERT INTO Fournisseur('08390', '29 Bd André-Georges Voisin 37540 Saint-Cyr-su
 INSERT INTO Fournisseur('92968', '8 Rue Daydat 63000 Clermont-Ferrand', 'MERCEDES France');
 INSERT INTO Fournisseur('18727','63 Bd Jean-Charle 38100 Isle Dabeau', 'RENAULT roule');
 
+--- INSERT Type ---
+
+INSERT INTO Type('A', 70, 3.5, 1.3, 4, 4, 'thermique', 'mecanique');
+INSERT INTO Type('B', 100, 4, 1.4, 5, 5, 'thermique', 'mecanique');
+INSERT INTO Type('C', 170, 5, 1.4, 5, 5, 'thermique', 'mecanique');
+INSERT INTO Type('E', 100, 3.5, 1.3, 4, 4, 'electrique', 'automatique');
+INSERT INTO Type('F', 150, 5, 1.4, 5, 5, 'hybride', 'automatique');
+
+--- INSERT Appartenir ---
+
+INSERT INTO Appartenir('C', '011');
+INSERT INTO Appartenir('F', '013');
+INSERT INTO Appartenir('F', '021');
+INSERT INTO Appartenir('C', '028');
+INSERT INTO Appartenir('A', '042');
+INSERT INTO Appartenir('E', '065');
+INSERT INTO Appartenir('B', '068');
+
+
+--- INSERT Formule ---
+
+INSERT INTO Formule('AJOU1', 'A', 60, 1, 200, 'N', 'N');
+INSERT INTO Formule('AVCA7', 'A', 70, 7, 2000, 'O', 'O');
+INSERT INTO Formule('BJOA2', 'B', 90, 2, 500, 'O', 'N');
+INSERT INTO Formule('CJOU1', 'C', 120, 1, 300, 'N', 'N');
+INSERT INTO Formule('CJOA1', 'C', 150, 1, 300, 'N', 'O');
+INSERT INTO Formule('EJOU1', 'E', 75, 1, 200, 'N', 'N');
+INSERT INTO Formule('FSEA4', 'F', 125, 4, 1000, 'N', 'O');
+
+
+--- INSERT Reduction ---
+
+INSERT INTO Reduction('professionnel', 'entreprise-20', 20);
