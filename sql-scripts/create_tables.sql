@@ -13,7 +13,6 @@ DROP TABLE Parc;
 DROP TABLE Zone;
 
 
-
 CREATE TABLE Zone(
 
     idZone      CHAR(5)  CONSTRAINT cp_Zone PRIMARY KEY,
@@ -43,8 +42,8 @@ CREATE TABLE Reduction(
 CREATE TABLE Client(
 
     idClient    CHAR(10) CONSTRAINT cp_Client PRIMARY KEY,
-    typeClient VARCHAR(11) CONSTRAINT Ce_typeClient REFERENCES Reduction,
-    nomClient   VARCHAR(20) CONSTRAINT nomClient NOT NULL,
+    typeClient VARCHAR(15) CONSTRAINT Ce_typeClient REFERENCES Reduction,
+    nomClient   VARCHAR(40) CONSTRAINT nomClient NOT NULL,
     ageClient NUMERIC(3) CONSTRAINT ageClient NOT NULL,
     sexeClient CHAR(1) CONSTRAINT sexeClient CHECK(sexeClient IN ('M','F')) NOT NULL,
     addrDomicile VARCHAR(50) CONSTRAINT addrClient NOT NULL,
@@ -92,7 +91,7 @@ CREATE TABLE Formule(
     numType CHAR(5) CONSTRAINT Ce_type REFERENCES Type,
     prixJour FLOAT(4) CONSTRAINT prix_jour NOT NULL,
     tempReserv NUMERIC(2) CONSTRAINT temp_reserv NOT NULL,
-    Kilometremax NUMERIC(3) CONSTRAINT km_max NOT NULL,
+    Kilometremax NUMERIC(4) CONSTRAINT km_max NOT NULL,
     optCarburant CHAR(1) CONSTRAINT opt_carbu CHECK(optCarburant IN ('O','N')) NOT NULL,
     optAssurance CHAR(1) CONSTRAINT opt_assurance CHECK(optAssurance IN ('O','N')) NOT NULL
 
