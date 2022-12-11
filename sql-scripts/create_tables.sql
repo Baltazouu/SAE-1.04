@@ -1,19 +1,7 @@
-DROP TABLE Zone Cascade;
-DROP TABLE Parc Cascade;
-DROP TABLE Client Cascade;
-DROP TABLE Modele Cascade;
-DROP TABLE Parc Cascade;
-DROP TABLE Fournisseur Cascade;
-DROP TABLE Type Cascade;
-DROP TABLE Formule Cascade;
-DROP TABLE Vehicule Cascade;
-DROP TABLE Appartenir Cascade; 
-
 CREATE TABLE Zone(
 
     idZone      CHAR(5)  CONSTRAINT cp_Zone PRIMARY KEY,
     nomZone     VARCHAR(20) CONSTRAINT nomZone NOT NULL,
-    addresseZone VARCHAR(50) CONSTRAINT addrZone NOT NULL
 );
 
 CREATE TABLE Parc(
@@ -23,6 +11,18 @@ CREATE TABLE Parc(
     addresseParc VARCHAR(50) CONSTRAINT addrParc NOT NULL,
     nomParc     VARCHAR(20) CONSTRAINT nomParc NOT NULL
 );
+
+
+
+CREATE TABLE Reduction(
+
+    typeClient VARCHAR(11) CONSTRAINT typeClient CHECK (typeClient IN('particulier','professionnel')) PRIMARY KEY,
+    NomReduction VARCHAR(15) CONSTRAINT NomReduction NOT NULL,
+    PourcentageReduction NUMERIC(20) CONSTRAINT PourcentageReduction CHECK(PourcentageReduction>0) NOT NULL
+);
+
+
+
 
 CREATE TABLE Client(
 
@@ -42,25 +42,24 @@ CREATE TABLE Client(
 
 CREATE TABLE Modele(
 
-    numModel CHAR(3) CONSTRAINT cp_Modele PRIMARY KEY,\
- 	nomModel VARCHAR(10) CONSTRAINT NomModel NOT NULL,
+    numModel CHAR(3) CONSTRAINT cp_Modele PRIMARY KEY,
+
     puissance NUMERIC(3) CONSTRAINT puissance NOT NULL,
-    nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
-    nbPortes NUMERIC(1) CONSTRAINT nombrePortes NOT NULL,
     longueur float (2) CONSTRAINT longueurModele NOT NULL,
     hauteur float (2) CONSTRAINT hauteurModele NOT NULL
-)
+);
 
 CREATE TABLE Fournisseur(
 
     numFournisseur CHAR(5) CONSTRAINT numeroFournisseur PRIMARY KEY,
     addrFournisseur VARCHAR(50) CONSTRAINT addrresseFournisseur NOT NULL,
     nomFournisseur VARCHAR(20) CONSTRAINT nomFournisseur NOT NULL
-)
+);
 
 CREATE TABLE Type(
 
     numType CHAR(5) CONSTRAINT cp_Type PRIMARY KEY,
+    puissanceMoy NUMERIC(3) CONSTRAINT puissanceMoy NOT NULL,
     longMoy float(3) CONSTRAINT longueur_Moy NOT NULL,
     hautMoy float(3) CONSTRAINT hauteur_Moy NOT NULL,
     nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
@@ -99,5 +98,17 @@ CREATE TABLE Appartenir(
     numModel CHAR(5) CONSTRAINT ce_Modele REFERENCES Modele,
 
     PRIMARY KEY (numType,numModel)
+);
 
+CREATE TABLE Date(
+
+    dateLivraison DATE CONSTRAINT CP_DateLivraison PRIMARY KEY
+);
+
+CREATE TABLE Livraison(
+
+    numFournisseur CHAR(5) REFERENCES(Fournisseur),
+    dateLivraison DATE CONSTRAINT CE_DateLivraison REFERENCES(Date),
+    numVehicule CHAR(5) CONSTRAINT Ce_NumVehicule REFERENCES(Vehicule)
+    PRIMARY KEY(numFournisseur,dateLivraison,numVehicule)
 );
