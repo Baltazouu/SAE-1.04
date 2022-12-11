@@ -81,7 +81,7 @@ CREATE TABLE Type(
     hautMoy FLOAT(4) CONSTRAINT hauteur_Moy NOT NULL,
     nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
     nbPortes NUMERIC(1) CONSTRAINT nombrePortes NOT NULL,
-    TypeMotorisation VARCHAR(10) CONSTRAINT Motorisation CHECK(TypeMotorisation IN ('hybride','thermique','electrique')) NOT NULL,
+    TypeMotorisation VARCHAR(15) CONSTRAINT Motorisation CHECK(TypeMotorisation IN ('hybride','thermique','electrique')) NOT NULL,
     TypeBoiteVitesse VARCHAR(10) CONSTRAINT BoiteVitesse CHECK(TypeBoiteVitesse IN ('mecanique','automatique')) 
 );
 
