@@ -31,7 +31,7 @@ CREATE TABLE Parc(
 
 CREATE TABLE Reduction(
 
-    typeClient VARCHAR(11) CONSTRAINT CP_typeClient CHECK (typeClient IN('particulier','professionnel')) PRIMARY KEY,
+    typeClient VARCHAR(15) CONSTRAINT CP_typeClient CHECK (typeClient IN('particulier','professionnel')) PRIMARY KEY,
     NomReduction VARCHAR(15) CONSTRAINT NomReduction NOT NULL,
     PourcentageReduction NUMERIC(20) CONSTRAINT PourcentageReduction CHECK(PourcentageReduction>0) NOT NULL
 );
