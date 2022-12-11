@@ -103,7 +103,7 @@ CREATE TABLE Vehicule(
     idParcAppartenant CHAR(5) CONSTRAINT ce_idParcAppartenant REFERENCES Parc(idParc),
     idParcSitue CHAR(5) CONSTRAINT ce_idParcSitue REFERENCES Parc(idParc),
     numModel CHAR(3) CONSTRAINT Ce_numModel REFERENCES Modele,
-    dateAchat DATE NOT NULL,
+    dateSortieUsine DATE NOT NULL,
     kilometrage NUMERIC(7),-- pas de not null car pas de carburant pour ve_electriques
     nivCarburant FLOAT(1) CONSTRAINT niv_carbu NOT NULL,
     imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL,
