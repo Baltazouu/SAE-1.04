@@ -140,6 +140,6 @@ CREATE TABLE Contrat(
     numFormule CHAR(5) CONSTRAINT Ce_Formule REFERENCES Formule,
     dateDepart DATE CONSTRAINT dateDepart NOT NULL,
     heureDepart NUMERIC(2) CONSTRAINT heureDepart NOT NULL,
-    dateRetour DATE NOT NULL,-- pas de non null car date retour inconnue
+    dateRetour DATE,-- pas de non null car date retour inconnue
     heureRetour NUMERIC(2)-- pas de non null car date retour inconnue
-)
+);
