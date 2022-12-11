@@ -60,7 +60,7 @@ INSERT INTO Formule VALUES('FSEA4', 'F', 125, 4, 1000, 'N', 'O');
 
 
 INSERT INTO Reduction   VALUES('professionnel', 'entreprise-20', 20);
-INSERT INTO Reduction   VALUES('particulier', 'particulier-20', 5);
+INSERT INTO Reduction   VALUES('particulier', 'particulier-5', 5);
 
 --- INSERT Client ---
 
