@@ -1,4 +1,4 @@
---- INSERT zones ---
+	--- INSERT zones ---
 
 INSERT INTO Zone('0NORD', 'Nord_Ouest');
 INSERT INTO Zone('PARIS', 'Région_Parisienne');
@@ -17,13 +17,13 @@ INSERT INTO Parc('NORD1', '0NORD', '8 Rue Nicolas Oresme 14000 Caen', 'ABAM Caen
 
 --- INSERT Modeles ---
 
-INSERT INTO Modele ('011', 'BMW S1', 023, 5, 5, 4.319, 1.434);
-INSERT INTO Modele ('013', 'BMW M8', 055, 5, 5, 5.098, 1.420);
-INSERT INTO Modele ('021', 'MERCEDES CA', 008, 5, 5, 4.549, 1.411);
-INSERT INTO Modele ('028', 'MERCEDES CC', 010, 5, 5, 4.751 ,1.437);
-INSERT INTO Modele ('042', 'FIAT 500', 004, 4, 3, 3.571, 1.488);
-INSERT INTO Modele ('065', 'RENAULT CLIO', 005, 5, 5, 4.050, 1.440);
-INSERT INTO Modele ('068', 'RENAULT MEGANE', 005, 5, 5, 4.626, 1.457);
+INSERT INTO Modele ('011', 'BMW S1', 023, 4.318, 1.434);
+INSERT INTO Modele ('013', 'BMW M8', 055, 5.098, 1.420);
+INSERT INTO Modele ('021', 'MERCEDES CA', 008, 4.549, 1.411);
+INSERT INTO Modele ('028', 'MERCEDES CC', 010, 4.751 ,1.437);
+INSERT INTO Modele ('042', 'FIAT 500', 004, 3.571, 1.488);
+INSERT INTO Modele ('065', 'RENAULT CLIO', 005, 4.050, 1.440);
+INSERT INTO Modele ('068', 'RENAULT MEGANE', 005, 4.626, 1.457);
 
 --- INSERT Fournisseur ---
 
