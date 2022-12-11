@@ -1,3 +1,4 @@
+DROP TABLE Contrat;
 DROP TABLE Livraison;
 DROP TABLE Date;
 DROP TABLE Appartenir;
@@ -86,12 +87,13 @@ CREATE TABLE Type(
 
 CREATE TABLE Formule(
 
-    idParc CHAR(5) CONSTRAINT cp_Formule PRIMARY KEY,
+    numFormule CHAR(5) CONSTRAINT CP_formule PRIMARY KEY,
+    numType CHAR(5) CONSTRAINT Ce_type REFERENCES Type,
     prixJour FLOAT(4) CONSTRAINT prix_jour NOT NULL,
     tempReserv NUMERIC(2) CONSTRAINT temp_reserv NOT NULL,
     Kilometremax NUMERIC(3) CONSTRAINT km_max NOT NULL,
-    optCarburant VARCHAR(30) CONSTRAINT opt_carbu NOT NULL,
-    optAssurance VARCHAR(40) CONSTRAINT opt_assurance NOT NULL
+    optCarburant CHAR(1) CONSTRAINT opt_carbu CHECK(optCarburant IN ('O','N')) NOT NULL,
+    optAssurance CHAR(1) CONSTRAINT opt_assurance CHECK(optAssurance IN ('O','N')) NOT NULL
 
 );
 
@@ -102,8 +104,8 @@ CREATE TABLE Vehicule(
     idParcSitue CHAR(5) CONSTRAINT ce_idParcSitue REFERENCES Parc(idParc),
     numModel CHAR(3) CONSTRAINT Ce_numModel REFERENCES Modele,
     dateAchat DATE NOT NULL,
-    kilometrage NUMERIC(7) CONSTRAINT kilometrage NOT NULL,
-    nivCarburant FLOAT(4) CONSTRAINT niv_carbu NOT NULL,
+    kilometrage NUMERIC(7),-- pas de not null car pas de carburant pour ve_electriques
+    nivCarburant FLOAT(1) CONSTRAINT niv_carbu NOT NULL,
     imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL,
     nbLoc NUMERIC(4) CONSTRAINT nb_loc CHECK(nbLoc >=0) NOT NULL,
     etat VARCHAR (12) CONSTRAINT etat CHECK(etat IN ('disponible','indisponible')) NOT NULL
@@ -131,3 +133,15 @@ CREATE TABLE Livraison(
     numVehicule CHAR(5) CONSTRAINT Ce_NumVehicule REFERENCES Vehicule(idVehicule),
     PRIMARY KEY(numFournisseur,dateLivraison,numVehicule)
 );
+
+CREATE TABLE Contrat(
+
+    numContrat VARCHAR(10) CONSTRAINT CP_Contrat PRIMARY KEY,
+    idClient CHAR(10) CONSTRAINT Ce_Client REFERENCES Client,
+    idVehicule CHAR(5) CONSTRAINT Ce_Vehicule REFERENCES Vehicule,
+    numFormule CHAR(5) CONSTRAINT Ce_Formule REFERENCES Formule,
+    dateDepart DATE NOT NULL,
+    heureDepart NUMERIC(2) NOT NULL,
+    dateRetour DATE NOT NULL,
+    heureRetour NUMERIC(2) NOT NULL
+)
