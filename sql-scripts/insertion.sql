@@ -100,3 +100,17 @@ INSERT INTO Contrat(1234567, 'as86dfr14t', 'abc13', 'CJOA1', '2022-12-11', 17, '
 INSERT INTO Contrat(9876544, 'z4g56sa74d', 'fgh49', 'AJOU1', '2022-12-10', 9, '2022-12-12', 15);
 INSERT INTO Contrat(1357975, 'z6d5q4ac5d', 'fgh49', 'AVCA7', '2022-12-12', 16, , );
 INSERT INTO Contrat(3180470, 'n7a5r9u6to', '3jd23', 'FSEA4', '2022-12-09', 6, '2022-12-13', 6);
+
+
+--- INSERT Livraison ---
+
+INSERT INTO Livraison('5z6s5', '2021-12-24', 'abc12');
+INSERT INTO Livraison('5z6s5', '2021-12-24', 'abc13');
+INSERT INTO Livraison('666zz', '2022-11-25', 'wxc34');
+INSERT INTO Livraison('f69rr', '2022-11-02', '23df2');
+INSERT INTO Livraison('f69rr', '2022-05-12', '23df3');
+INSERT INTO Livraison('f69rr', '2022-05-12', 'lkj79');
+INSERT INTO Livraison('5z6s5', '2022-05-17', '3jd23');
+INSERT INTO Livraison('xbapx', '2022-12-09', 'fgh49');
+INSERT INTO Livraison('xbapx', '2022-12-09', 'fgh50');
+INSERT INTO Livraison('xbapx', '2022-12-09', 'fgh51');
