@@ -48,7 +48,7 @@ CREATE TABLE Client(
     sexeClient CHAR(1) CONSTRAINT sexeClient CHECK(sexeClient IN ('M','F')) NOT NULL,
     addrDomicile VARCHAR(50) CONSTRAINT addrClient NOT NULL,
     numTel CHAR (10) CONSTRAINT Tel_Client
-        CHECK (numTel LIKE ('[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')),
+        CHECK (numTel LIKE ('[0-9]{10}')),
     mailClient VARCHAR(50) CONSTRAINT mailClient NOT NULL
    
     
