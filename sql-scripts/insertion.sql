@@ -1,4 +1,4 @@
-	--- INSERT zones ---
+--- INSERT zones ---
 
 INSERT INTO Zone('0NORD', 'Nord_Ouest');
 INSERT INTO Zone('PARIS', 'Région_Parisienne');
@@ -25,12 +25,6 @@ INSERT INTO Modele ('042', 'FIAT 500', 004, 3.571, 1.488);
 INSERT INTO Modele ('065', 'RENAULT CLIO', 005, 4.050, 1.440);
 INSERT INTO Modele ('068', 'RENAULT MEGANE', 005, 4.626, 1.457);
 
---- INSERT Fournisseur ---
-
-INSERT INTO Fournisseur('05169', '50 Av de Stalingrad 95100 Argenteuil', 'BMW drive');
-INSERT INTO Fournisseur('08390', '29 Bd André-Georges Voisin 37540 Saint-Cyr-sur-Loire', 'Garage FIAT');
-INSERT INTO Fournisseur('92968', '8 Rue Daydat 63000 Clermont-Ferrand', 'MERCEDES France');
-INSERT INTO Fournisseur('18727','63 Bd Jean-Charle 38100 Isle Dabeau', 'RENAULT roule');
 
 --- INSERT Type ---
 
@@ -68,10 +62,41 @@ INSERT INTO Reduction('professionnel', 'entreprise-20', 20);
 
 --- INSERT Client ---
 
-INSERT INTO Client('as86dfr14t', 'Bernadete', 58, 'F', '35 Rue Charcot 69110 Sainte-Foy-lès-Lyon', '0784376942');
+INSERT INTO Client('as86dfr14t', 'Bernadete Hernandez', 58, 'F', '35 Rue Charcot 69110 Sainte-Foy-lès-Lyon', '0784376942');
 INSERT INTO Client('z4g56sa74d', 'Alexandre Vim', 19, 'M','12 Rue Lesflot 69002 Lyon', '0632732665');
 INSERT INTO Client('sm5a657zd1', 'Louis Prince', 32, 'M', '56 BD Lamarre 70123 Paris', '0499576310');
 INSERT INTO Client('z6d5q4ac5d', 'Baptiste Footix', 18, 'F', '23 Rue Mont-Dor 14800 Deauville', '0716346984');
 INSERT INTO Client('dbz4579as1', 'Alexandre Blablacar', 29, 'M', '20 Rue Paul Mirabelle 63000 Clermont-Ferrand', '0624787410');
 INSERT INTO Client('op65as5df4', 'Maxence Raison', 18, 'M', '2 BD Lassale 69350 Lyon', '0693467812');
 INSERT INTO Client('n7a5r9u6to', 'Paul Spiderman', 82, 'M', '25 Rue Lespsyco 14003 Caen', '0758323330');
+
+
+
+-- INSERT Fournisseur ---
+
+INSERT INTO Fournisseur('5z6s5', '12 Rue Saint-Nectar 75000 Paris', 'BMW');
+INSERT INTO Fournisseur('666zz', '25 BD Hugo Decrypte 63100 Clermont-Ferrand', 'MERCEDES');
+INSERT INTO Fournisseur('xbapx', '1 Rue Joefroid 69100 Lyon', 'FIAT');
+INSERT INTO Fournisseur('f69rr', '12 Rue Paulito 75021 Paris', 'RENAULT');
+
+
+--- INSERT Vehicule ---
+
+INSERT INTO Vehicule('abc12', 'PAR01', 'PAR01', '011', '2021-12-04', 21754, 8, 'FRGF994QF', 14, 'disponible');
+INSERT INTO Vehicule('abc13', 'PAR01', 'PAR01', '011', '2021-12-04', 20120, 7, 'FRGD851CP', 19, 'disponible');
+INSERT INTO Vehicule('wxc34', 'PAR01', 'PAR02', '021', '2022-10-01', 4230, 6, 'FRFZ831XL', 3, 'disponible');
+INSERT INTO Vehicule('23df2', 'LYON2', 'LYON2', '065', '2022-04-21', 10543, 1, 'FRFL831VQ', 21, 'disponible');
+INSERT INTO Vehicule('23df3', 'LYON2', 'LYON2', '065', '2022-04-21', 7, 8, 'FRFR786LZ', 0, 'indisponible');
+INSERT INTO Vehicule('lkj79', 'NORD1', 'LYON2', '068', '2021-11-02', 27342, 8, 'FRFZ003GS', 39, 'indisponible');
+INSERT INTO Vehicule('3jd23', 'NORD1', 'NORD1', '013', '2022-02-02', 1020, 8, 'FRGH125YG', 4, 'indisponible');
+INSERT INTO Vehicule('fgh49', 'LYON1', 'LYON1', '042', '2022-11-13', 3001, 8, 'FRFZ253DX', 12, 'indisponible');
+INSERT INTO Vehicule('fgh50', 'LYON2', 'LYON1', '042', '2022-11-13', 3234, 8, 'FRFN732KY', 8, 'disponible');
+INSERT INTO Vehicule('fgh51', 'LYON2', 'LYON2', '042', '2022-11-13', 6, 8, 'FRGF378XZ', 0, 'disponible');
+
+
+--- INSERT Contrat ---
+
+INSERT INTO Contrat(1234567, 'as86dfr14t', 'abc13', 'CJOA1', '2022-12-11', 17, '2022-12-12', 16);
+INSERT INTO Contrat(9876544, 'z4g56sa74d', 'fgh49', 'AJOU1', '2022-12-10', 9, '2022-12-12', 15);
+INSERT INTO Contrat(1357975, 'z6d5q4ac5d', 'fgh49', 'AVCA7', '2022-12-12', 16, , );
+INSERT INTO Contrat(3180470, 'n7a5r9u6to', '3jd23', 'FSEA4', '2022-12-09', 6, '2022-12-13', 6);
