@@ -105,7 +105,7 @@ CREATE TABLE Vehicule(
     kilometrage NUMERIC(7) CONSTRAINT kilometrage NOT NULL,
     nivCarburant FLOAT(4) CONSTRAINT niv_carbu NOT NULL,
     imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL,
-    nbLoc NUMERIC(4) CONSTRAINT nb_loc CHECK(nb_loc >=0) NOT NULL,
+    nbLoc NUMERIC(4) CONSTRAINT nb_loc CHECK(nbLoc >=0) NOT NULL,
     etat VARCHAR (12) CONSTRAINT etat CHECK(etat IN ('disponible','indisponible')) NOT NULL
     
 
