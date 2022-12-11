@@ -75,7 +75,7 @@ INSERT INTO Client('z6d5q4ac5d', 'Baptiste Footix', 18, 'F', '23 Rue Mont-Dor 14
 INSERT INTO Client('dbz4579as1', 'Alexandre Blablacar', 29, 'M', '20 Rue Paul Mirabelle 63000 Clermont-Ferrand', '0624787410');
 INSERT INTO Client('op65as5df4', 'Maxence Raison', 18, 'M', '2 BD Lassale 69350 Lyon', '0693467812');
 INSERT INTO Client('n7a5r9u6to', 'Paul Spiderman', 82, 'M', '25 Rue Lespsyco 14003 Caen', '0758323330');
-
+ 
 --- INSERT Vehicule ---
 
 INSERT INTO Vehicule('abc12', 'PAR01', 'PAR01', '011', '2021-12-04', 21754, 8, 'FRGF994QF', 14, 'disponible');
@@ -85,6 +85,14 @@ INSERT INTO Vehicule('23df2', 'LYON2', 'LYON2', '065', '2022-04-21', 10543, 1, '
 INSERT INTO Vehicule('23df3', 'LYON2', 'LYON2', '065', '2022-04-21', 7, 8, 'FRFR786LZ', 0, 'indisponible');
 INSERT INTO Vehicule('lkj79', 'NORD1', 'LYON2', '068', '2021-11-02', 27342, 8, 'FRFZ003GS', 39, 'indisponible');
 INSERT INTO Vehicule('3jd23', 'NORD1', 'NORD1', '013', '2022-02-02', 1020, 8, 'FRGH125YG', 4, 'indisponible');
-INSERT INTO Vehicule('fgh49', 'LYON1', 'LYON1', '042', '2022-11-13', 3001, 8, 'FRFZ253DX', 12, 'disponible');
+INSERT INTO Vehicule('fgh49', 'LYON1', 'LYON1', '042', '2022-11-13', 3001, 8, 'FRFZ253DX', 12, 'indisponible');
 INSERT INTO Vehicule('fgh50', 'LYON2', 'LYON1', '042', '2022-11-13', 3234, 8, 'FRFN732KY', 8, 'disponible');
 INSERT INTO Vehicule('fgh51', 'LYON2', 'LYON2', '042', '2022-11-13', 6, 8, 'FRGF378XZ', 0, 'disponible');
+
+
+--- INSERT Contrat ---
+
+INSERT INTO Contrat(1234567, 'as86dfr14t', 'abc13', 'CJOA1', '2022-12-11', 17, '2022-12-12', 16);
+INSERT INTO Contrat(9876544, 'z4g56sa74d', 'fgh49', 'AJOU1', '2022-12-10', 9, '2022-12-12', 15);
+INSERT INTO Contrat(1357975, 'z6d5q4ac5d', 'fgh49', 'AVCA7', '2022-12-12', 16, , );
+INSERT INTO Contrat(3180470, 'n7a5r9u6to', '3jd23', 'FSEA4', '2022-12-09', 6, '2022-12-13', 6);
