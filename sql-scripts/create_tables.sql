@@ -136,7 +136,7 @@ CREATE TABLE Livraison(
 
 CREATE TABLE Contrat(
 
-    numContrat VARCHAR(10) CONSTRAINT CP_Contrat PRIMARY KEY,
+    numContrat NUMERIC(7) CONSTRAINT CP_Contrat PRIMARY KEY,
     idClient CHAR(10) CONSTRAINT Ce_Client REFERENCES Client,
     idVehicule CHAR(5) CONSTRAINT Ce_Vehicule REFERENCES Vehicule,
     numFormule CHAR(5) CONSTRAINT Ce_Formule REFERENCES Formule,
