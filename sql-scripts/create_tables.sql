@@ -47,11 +47,9 @@ CREATE TABLE Client(
     ageClient NUMERIC(3) CONSTRAINT ageClient NOT NULL,
     sexeClient CHAR(1) CONSTRAINT sexeClient CHECK(sexeClient IN ('M','F')) NOT NULL,
     addrDomicile VARCHAR(50) CONSTRAINT addrClient NOT NULL,
-    numTel NUMERIC (10) CONSTRAINT Tel_Client
-        CHECK (numTel LIKE ('[0-9]{10}')),
+    numTel NUMERIC (10) CONSTRAINT Tel_Client NOT NULL,
     mailClient VARCHAR(50) CONSTRAINT mailClient NOT NULL
-   
-    
+
 );
 
 
