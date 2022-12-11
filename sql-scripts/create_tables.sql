@@ -82,7 +82,7 @@ CREATE TABLE Type(
     nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
     nbPortes NUMERIC(1) CONSTRAINT nombrePortes NOT NULL,
     TypeMotorisation VARCHAR(15) CONSTRAINT Motorisation CHECK(TypeMotorisation IN ('hybride','thermique','electrique')) NOT NULL,
-    TypeBoiteVitesse VARCHAR(10) CONSTRAINT BoiteVitesse CHECK(TypeBoiteVitesse IN ('mecanique','automatique')) 
+    TypeBoiteVitesse VARCHAR(15) CONSTRAINT BoiteVitesse CHECK(TypeBoiteVitesse IN ('mecanique','automatique')) 
 );
 
 
