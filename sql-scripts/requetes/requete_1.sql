@@ -7,5 +7,4 @@
 SELECT  etat
 FROM    Vehicule
 
-WHERE   etat = 'disponible'
-:
+WHERE   etat = 'disponible';
