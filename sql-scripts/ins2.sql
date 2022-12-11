@@ -2,7 +2,7 @@ DROP TABLE Zone Cascade;
 DROP TABLE Parc Cascade;
 DROP TABLE Client Cascade;
 DROP TABLE Modele Cascade;
-DROP TABLE Parc;
+DROP TABLE Parc Cascade;
 DROP TABLE Fournisseur Cascade;
 DROP TABLE Type Cascade;
 DROP TABLE Formule Cascade;
@@ -42,21 +42,21 @@ CREATE TABLE Client(
 
 CREATE TABLE Modele(
 
-    numModel CHAR(3) CONSTRAINT cp_Modele PRIMARY KEY,
+    numModel CHAR(3) CONSTRAINT cp_Modele PRIMARY KEY,\
  	nomModel VARCHAR(10) CONSTRAINT NomModel NOT NULL,
     puissance NUMERIC(3) CONSTRAINT puissance NOT NULL,
     nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
     nbPortes NUMERIC(1) CONSTRAINT nombrePortes NOT NULL,
     longueur float (2) CONSTRAINT longueurModele NOT NULL,
     hauteur float (2) CONSTRAINT hauteurModele NOT NULL
-);
+)
 
 CREATE TABLE Fournisseur(
 
     numFournisseur CHAR(5) CONSTRAINT numeroFournisseur PRIMARY KEY,
     addrFournisseur VARCHAR(50) CONSTRAINT addrresseFournisseur NOT NULL,
     nomFournisseur VARCHAR(20) CONSTRAINT nomFournisseur NOT NULL
-);
+)
 
 CREATE TABLE Type(
 
