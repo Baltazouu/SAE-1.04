@@ -49,7 +49,7 @@ CREATE TABLE Client(
     addrDomicile VARCHAR(50) CONSTRAINT addrClient NOT NULL,
     numTel CHAR (10) CONSTRAINT Tel_Client
         CHECK (numTel LIKE ('[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')),
-    mailClient VARCHAR(30) CONSTRAINT mailClient NOT NULL
+    mailClient VARCHAR(50) CONSTRAINT mailClient NOT NULL
    
     
 );
