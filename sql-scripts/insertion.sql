@@ -25,12 +25,6 @@ INSERT INTO Modele ('042', 'FIAT 500', 004, 3.571, 1.488);
 INSERT INTO Modele ('065', 'RENAULT CLIO', 005, 4.050, 1.440);
 INSERT INTO Modele ('068', 'RENAULT MEGANE', 005, 4.626, 1.457);
 
---- INSERT Fournisseur ---
-
-INSERT INTO Fournisseur('05169', '50 Av de Stalingrad 95100 Argenteuil', 'BMW drive');
-INSERT INTO Fournisseur('08390', '29 Bd André-Georges Voisin 37540 Saint-Cyr-sur-Loire', 'Garage FIAT');
-INSERT INTO Fournisseur('92968', '8 Rue Daydat 63000 Clermont-Ferrand', 'MERCEDES France');
-INSERT INTO Fournisseur('18727','63 Bd Jean-Charle 38100 Isle Dabeau', 'RENAULT roule');
 
 --- INSERT Type ---
 
