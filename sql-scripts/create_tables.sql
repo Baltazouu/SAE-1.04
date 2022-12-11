@@ -140,8 +140,8 @@ CREATE TABLE Contrat(
     idClient CHAR(10) CONSTRAINT Ce_Client REFERENCES Client,
     idVehicule CHAR(5) CONSTRAINT Ce_Vehicule REFERENCES Vehicule,
     numFormule CHAR(5) CONSTRAINT Ce_Formule REFERENCES Formule,
-    dateDepart DATE NOT NULL,
-    heureDepart NUMERIC(2) NOT NULL,
-    dateRetour DATE NOT NULL,
-    heureRetour NUMERIC(2) NOT NULL
+    dateDepart DATE CONSTRAINT dateDepart NOT NULL,
+    heureDepart NUMERIC(2) CONSTRAINT heureDepart NOT NULL,
+    dateRetour DATE NOT NULL,-- pas de non null car date retour inconnue
+    heureRetour NUMERIC(2)-- pas de non null car date retour inconnue
 )
