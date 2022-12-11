@@ -7,7 +7,7 @@ CREATE TABLE Zone(
 CREATE TABLE Parc(
 
     idParc      CHAR(5)  CONSTRAINT cp_Parc PRIMARY KEY,
-    idZone      CHAR(5)  CONSTRAINT ce_Zone REFERENCES Zone,
+    idZone      CHAR(5)  CONSTRAINT ce_Zone REFERENCES(Zone),
     addresseParc VARCHAR(50) CONSTRAINT addrParc NOT NULL,
     nomParc     VARCHAR(20) CONSTRAINT nomParc NOT NULL
 );
@@ -107,7 +107,7 @@ CREATE TABLE Date(
 
 CREATE TABLE Livraison(
 
-    numFournisseur CHAR(5) REFERENCES(Fournisseur),
+    numFournisseur CHAR(5) CONSTRAINT CE_Fournisseur REFERENCES(Fournisseur),
     dateLivraison DATE CONSTRAINT CE_DateLivraison REFERENCES(Date),
     numVehicule CHAR(5) CONSTRAINT Ce_NumVehicule REFERENCES(Vehicule)
     PRIMARY KEY(numFournisseur,dateLivraison,numVehicule)
