@@ -58,10 +58,10 @@ CREATE TABLE Client(
 CREATE TABLE Modele(
 
     numModel CHAR(3) CONSTRAINT cp_Modele PRIMARY KEY,
-
+    nomModel VARCHAR(20) CONSTRAINT Nom_Modele NOT NULL,
     puissance NUMERIC(3) CONSTRAINT puissance NOT NULL,
-    longueur float (2) CONSTRAINT longueurModele NOT NULL,
-    hauteur float (2) CONSTRAINT hauteurModele NOT NULL
+    longueur FLOAT (4) CONSTRAINT longueurModele NOT NULL,
+    hauteur FLOAT (4) CONSTRAINT hauteurModele NOT NULL
 );
 
 CREATE TABLE Fournisseur(
@@ -75,8 +75,8 @@ CREATE TABLE Type(
 
     numType CHAR(5) CONSTRAINT cp_Type PRIMARY KEY,
     puissanceMoy NUMERIC(3) CONSTRAINT puissanceMoy NOT NULL,
-    longMoy float(3) CONSTRAINT longueur_Moy NOT NULL,
-    hautMoy float(3) CONSTRAINT hauteur_Moy NOT NULL,
+    longMoy FLOAT(4) CONSTRAINT longueur_Moy NOT NULL,
+    hautMoy FLOAT(4) CONSTRAINT hauteur_Moy NOT NULL,
     nbPlaces NUMERIC(1) CONSTRAINT nombrePlaces NOT NULL,
     nbPortes NUMERIC(1) CONSTRAINT nombrePortes NOT NULL,
     TypeMotorisation VARCHAR(10) CONSTRAINT Motorisation CHECK(TypeMotorisation IN ('hybride','thermique','electrique')) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE Type(
 CREATE TABLE Formule(
 
     idParc CHAR(5) CONSTRAINT cp_Formule PRIMARY KEY,
-    prixJour float(6) CONSTRAINT prix_jour NOT NULL,
+    prixJour FLOAT(4) CONSTRAINT prix_jour NOT NULL,
     tempReserv NUMERIC(2) CONSTRAINT temp_reserv NOT NULL,
     Kilometremax NUMERIC(3) CONSTRAINT km_max NOT NULL,
     optCarburant VARCHAR(30) CONSTRAINT opt_carbu NOT NULL,
