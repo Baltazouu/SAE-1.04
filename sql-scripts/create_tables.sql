@@ -98,12 +98,16 @@ CREATE TABLE Formule(
 CREATE TABLE Vehicule(
 
     idVehicule CHAR(5) CONSTRAINT cp_Vehicule PRIMARY KEY,
-    tempReserv DATE CONSTRAINT tempreserv NOT NULL,
-    Kilometrage NUMERIC(7) CONSTRAINT kilometre NOT NULL,
+    idParcAppartenant CHAR(5) CONSTRAINT ce_idParcAppartenant REFERENCES Parc(idParc),
+    idParcSitue CHAR(5) CONSTRAINT ce_idParcSitue REFERENCES Parc(idParc),
+    numModel CHAR(3) CONSTRAINT Ce_numModel REFERENCES Modele,
+    dateAchat DATE NOT NULL,
+    kilometrage NUMERIC(7) CONSTRAINT kilometrage NOT NULL,
     nivCarburant FLOAT(4) CONSTRAINT niv_carbu NOT NULL,
-    nbLocation NUMERIC(4) CONSTRAINT nb_loc NOT NULL,
-    Etat VARCHAR (12) CONSTRAINT etat CHECK(etat IN ('disponible','indisponible')) NOT NULL,
-    Imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL
+    imatriculation VARCHAR(10) CONSTRAINT immatriculation NOT NULL,
+    nbLoc NUMERIC(4) CONSTRAINT nb_loc CHECK(nb_loc >=0) NOT NULL,
+    etat VARCHAR (12) CONSTRAINT etat CHECK(etat IN ('disponible','indisponible')) NOT NULL
+    
 
 );
 
@@ -124,6 +128,6 @@ CREATE TABLE Livraison(
 
     numFournisseur CHAR(5) CONSTRAINT CE_Fournisseur REFERENCES Fournisseur,
     dateLivraison DATE CONSTRAINT CE_DateLivraison REFERENCES Date,
-    numVehicule CHAR(5) CONSTRAINT Ce_NumVehicule REFERENCES Vehicule,
+    numVehicule CHAR(5) CONSTRAINT Ce_NumVehicule REFERENCES Vehicule(idVehicule),
     PRIMARY KEY(numFournisseur,dateLivraison,numVehicule)
 );
