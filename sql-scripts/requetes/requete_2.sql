@@ -8,5 +8,5 @@
 SELECT  nomReduction, pourcentageReduction
 FROM    Reduction
 
-WHERE   typeClient = 'entreprise'
+WHERE   typeClient = 'professionnel'
 ;

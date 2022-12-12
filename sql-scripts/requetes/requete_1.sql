@@ -7,4 +7,5 @@
 SELECT  idVehicule
 FROM    Vehicule
 
-WHERE   etat = 'disponible';
+WHERE   etat = 'indisponible'
+;
