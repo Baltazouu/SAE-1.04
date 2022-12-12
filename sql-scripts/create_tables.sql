@@ -1,18 +1,3 @@
-DROP TABLE Contrat;
-DROP TABLE Livraison;
-DROP TABLE Date;
-DROP TABLE Appartenir;
-DROP TABLE Vehicule;
-DROP TABLE Formule;
-DROP TABLE Type;
-DROP TABLE Fournisseur;
-DROP TABLE Modele;
-DROP TABLE Client;
-DROP TABLE Reduction;
-DROP TABLE Parc;
-DROP TABLE Zone;
-
-
 CREATE TABLE Zone(
 
     idZone      CHAR(5)  CONSTRAINT cp_Zone PRIMARY KEY,
