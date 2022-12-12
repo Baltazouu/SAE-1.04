@@ -1,4 +1,4 @@
-# Requêtes Base de Donnée Sociétée **AVIS**
+# Requêtes Base de Donnée Sociétée **ABAM**
 
 * Dudonné Baptiste
 * Alexandre Agostinho
