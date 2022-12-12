@@ -4,8 +4,8 @@
     Recherche d'articles jamais loue.
 */
 
-SELECT  etat
+SELECT  idVehicule
 FROM    Vehicule
 
-WHERE   etat = 'disponible'
-:
+WHERE   etat = 'indisponible'
+;
